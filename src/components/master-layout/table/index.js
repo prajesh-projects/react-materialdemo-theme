@@ -86,7 +86,7 @@ function DataTable() {
             </TableHead>
             <tbody>
               {
-                dataTable.map((item, i) =>
+                dataTable.map((item,i) =>
                   <TableRow key={i}>
                     <TableCell>{item.name}</TableCell>
                     <TableCell>{item.task}</TableCell>
