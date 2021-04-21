@@ -20,7 +20,7 @@ class Innerpage extends React.Component {
     super();
     this.state = {
       selectedOption: '',
-      radiovalue: 'Option1',
+      radiovalue: 'Option2',
     }
   }
 
@@ -109,7 +109,7 @@ class Innerpage extends React.Component {
                       <FormControlLabel
                         value="Option1"
                         control={<Radio
-                          className="custom-radio"
+                          className="custom-radio"  
                           checkedIcon={<span className="checked-radio" />}
                           icon={<span className="unchecked-radio" />}
                         />}
@@ -127,6 +127,7 @@ class Innerpage extends React.Component {
                       <FormControlLabel
                         control={<Checkbox
                           className="custom-checkbox"
+                          defaultChecked
                           checkedIcon={<span className="unchecked checked" />}
                           icon={<span className="unchecked" />}
                         />}

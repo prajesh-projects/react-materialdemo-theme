@@ -3,7 +3,7 @@ import "./header.css"
 // import Dropdown from 'react-bootstrap/Dropdown'
 import { images } from "../../../assets/images.js"
 import { Avatar, Badge, Menu, MenuItem, IconButton, ButtonBase, Button } from '@material-ui/core';
-import { Link as RouterLink } from 'react-router-dom';
+import {Link, Link as RouterLink, useHistory } from 'react-router-dom';
 
 
 const toggleMenu = () => {
@@ -11,12 +11,16 @@ const toggleMenu = () => {
   document.getElementById("hamburger").classList.toggle('is-active');
 }
 
-// window.onresize = function(event){
-//   document.body.classList.remove('show-menu');
-//   document.getElementById("hamburger").classList.remove('is-active');
-// }
+window.onresize = function(event){
+  if(document.getElementById("hamburger") != null){
+    document.body.classList.remove('show-menu');
+    document.getElementById("hamburger").classList.remove('is-active');
+  }
+}
 
 function Header() {
+  const history = useHistory();
+
   const [anchorEl, setAnchorEl] = React.useState(null);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -29,12 +33,12 @@ function Header() {
   return (
     <header className="header">
       <div className="left-header">
-        <div class="hamburger" id="hamburger" onClick={toggleMenu}>
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
+        <div className="hamburger" id="hamburger" onClick={toggleMenu}>
+          <span className="line"></span>
+          <span className="line"></span>
+          <span className="line"></span>
         </div>
-        <a href="#/" className="logo"><img src={images.logo.default} alt="" /></a>
+        <Link to={`${process.env.PUBLIC_URL}/home`} className="logo" ><img src={images.logo.default} alt="" /></Link>
       </div>
 
       <ul className="right-header">

@@ -1,7 +1,7 @@
 import React from "react";
 import "./login.css"
 import { images } from "../../../assets/images.js"
-import { Link as RouterLink} from 'react-router-dom';
+import { Link as RouterLink, useHistory} from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import { TextField, Button } from '@material-ui/core';
 
@@ -17,7 +17,7 @@ const opensignup = () => {
 }
 
 function Login() {
-
+  const history = useHistory();
   return (
     <div className="login-block-wrapper">
       <div className="logo-block">
@@ -62,7 +62,7 @@ function Login() {
           <TextField label="Password" type="password" fullWidth/>
           </div>
           <div className="text-left">
-            <Button variant="contained" disableElevation className="btn btn-signup">
+            <Button variant="contained" disableElevation className="btn btn-signup" onClick={() => {history.push(`${process.env.PUBLIC_URL}/home`);}}>
               </Button>
           </div>
         </div>
