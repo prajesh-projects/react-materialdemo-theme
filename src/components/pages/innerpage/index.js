@@ -89,6 +89,21 @@ class Innerpage extends React.Component {
                 </Grid>
                 <Grid item xs={12} sm={6}>
                   <div className="form-group">
+                    <InputLabel className="form-label" >City</InputLabel>
+                    <Select
+                      value={selectedOption}
+                      className="single-select"
+                      onChange={this.handleChange}
+                      clearable={false}
+                      options={[
+                        { value: 'City1', label: 'City1' },
+                        { value: 'City2', label: 'City2' },
+                      ]}
+                    />
+                  </div>
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                  <div className="form-group">
                     <InputLabel className="form-label" >State</InputLabel>
                     <Select
                       value={selectedOption}
