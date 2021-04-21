@@ -1,0 +1,314 @@
+.login-block-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.login-block-wrapper .logo-block,
+.login-block-wrapper .signin-block-wrapper,
+.login-block-wrapper .signup-block-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.login-block-wrapper .logo-block {
+    background-color: #fff;
+    width: 278px;
+}
+
+.login-block-wrapper .signin-block-wrapper {
+    background-color: #fa7268;
+    width: calc(50% - 139px);
+}
+
+.login-block-wrapper .signup-block-wrapper {
+    background-color: #3f434b;
+    width: calc(50% - 139px);
+}
+
+.login-block-wrapper .signin-user,
+.login-block-wrapper .signup-user {
+    color: #fff;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.login-block-wrapper .signin-user .thumb,
+.login-block-wrapper .signup-user .thumb {
+    transition: all 0.3s;
+    margin-bottom: 0px;
+}
+
+.login-block-wrapper .signin-user:hover .thumb,
+.login-block-wrapper .signup-user:hover .thumb {
+    margin-bottom: 5px;
+}
+
+.login-block-wrapper .form-group {
+    margin-bottom: 35px;
+}
+.login-block-wrapper .MuiTextField-root .MuiInputBase-root{
+    background-color: transparent;
+}
+
+.signin-block,
+.signup-block {
+    color: #fff;
+    width: 360px;
+    max-width: 100%;
+    padding-top: 40px;
+    display: none;
+}
+
+.signin-block h2,
+.signup-block h2 {
+    font-size: 36px;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    top: 38px;
+    left: 0;
+    right: 0;
+    padding: 0;
+}
+
+.MuiButton-root.btn-login,
+.MuiButton-root.btn-signup {
+    width: 92px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #fff;
+    background-image: url(../../../assets/images/right-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    transition: all .3s !important;
+}
+.MuiButton-root.btn-signup {
+    background-image: url(../../../assets/images/right-arrow-black.svg);
+}
+
+.MuiButton-root.btn-login:hover,
+.MuiButton-root.btn-signup:hover {
+    background-position: 80% 50%;
+    background-color: #fff;
+}
+
+
+.signin-block .login-btn-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.signin-block a {
+    color: #fff;
+}
+
+.signin-block a:hover {
+    color: #3f434b;
+}
+
+.login-open .login-block-wrapper .signin-user {
+    display: none;
+}
+
+.login-open .login-block-wrapper .signup-user {
+    font-size: 0;
+    line-height: 0;
+}
+
+.login-open .login-block-wrapper .signin-block-wrapper {
+    width: calc(74% - 139px);
+}
+
+.login-open .login-block-wrapper .signup-block-wrapper {
+    width: calc(26% - 139px);
+}
+
+.login-open .login-block-wrapper .signin-block {
+    display: block;
+}
+
+.signup-open .login-block-wrapper .signup-user {
+    display: none;
+}
+
+.signup-open .login-block-wrapper .signin-user {
+    font-size: 0;
+    line-height: 0;
+}
+
+.signup-open .login-block-wrapper .signup-block-wrapper {
+    width: calc(74% - 139px);
+}
+
+.signup-open .login-block-wrapper .signin-block-wrapper {
+    width: calc(26% - 139px);
+}
+
+.signup-open .login-block-wrapper .signup-block {
+    display: block;
+}
+
+
+
+.login-block-wrapper .MuiFormLabel-root,
+.login-block-wrapper .MuiInputBase-input {
+    color: #fff !important;
+}
+.login-block-wrapper .MuiFormLabel-root.Mui-focused {
+    color: #ccc;
+}
+.login-block-wrapper .MuiInputLabel-formControl {
+    transform: translate(0, 32px) scale(1);
+}
+.login-block-wrapper .MuiInputLabel-shrink {
+    transform: translate(0, 1.5px) scale(0.75);
+}
+.login-block-wrapper .MuiInput-underline:before{
+    border-color: #fff;
+}
+.login-block-wrapper .MuiInput-underline:hover:not(.Mui-disabled):before {
+    border-color: #fff;
+}
+.login-block-wrapper .MuiInput-underline:after {
+    border-color: #ccc;
+}
+
+
+@media (max-width:1199px) {
+    .login-block-wrapper .logo-block {
+        width: 180px;
+    }
+
+    .login-block-wrapper .signin-block-wrapper,
+    .login-block-wrapper .signup-block-wrapper {
+        width: calc(50% - 90px);
+    }
+
+    .login-open .login-block-wrapper .signin-block-wrapper {
+        width: calc(74% - 90px);
+    }
+
+    .login-open .login-block-wrapper .signup-block-wrapper {
+        width: calc(26% - 90px);
+    }
+
+    .signup-open .login-block-wrapper .signup-block-wrapper {
+        width: calc(74% - 90px);
+    }
+
+    .signup-open .login-block-wrapper .signin-block-wrapper {
+        width: calc(26% - 90px);
+    }
+}
+
+@media (max-width:991px) {
+    .login-block-wrapper .logo-block {
+        width: 130px;
+    }
+
+    .login-block-wrapper .logo-block .logo {
+        width: 86px;
+    }
+
+    .login-block-wrapper .signin-user,
+    .login-block-wrapper .signup-user {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .signin-block h2,
+    .signup-block h2 {
+        font-size: 24px;
+        line-height: 30px;
+        top: 20px;
+    }
+
+    .login-block-wrapper .signin-block-wrapper,
+    .login-block-wrapper .signup-block-wrapper{
+        width: calc(50% - 65px);
+    }
+
+    .login-open .login-block-wrapper .signin-block-wrapper {
+        width: calc(74% - 65px);
+    }
+
+    .login-open .login-block-wrapper .signup-block-wrapper {
+        width: calc(26% - 65px);
+    }
+
+    .signup-open .login-block-wrapper .signup-block-wrapper {
+        width: calc(74% - 65px);
+    }
+
+    .signup-open .login-block-wrapper .signin-block-wrapper {
+        width: calc(26% - 65px);
+    }
+}
+
+@media (max-width:767px) {
+    .login-block-wrapper {
+        flex-wrap: wrap;
+    }
+    .login-block-wrapper .logo-block {
+        width: 100%;
+        height: 100px;
+    }
+    .login-block-wrapper .logo-block .logo {
+        width: 70px;
+    }
+
+    .login-block-wrapper .form-group {
+        margin-bottom: 26px;
+    }
+
+    .signin-block, .signup-block {
+        padding: 52px 15px 30px;
+    }
+
+    .signin-block h2, .signup-block h2 {
+        font-size: 18px;
+        line-height: 22px;
+        top: 20px;
+    }
+
+    .login-block-wrapper .signin-block-wrapper, .login-block-wrapper .signup-block-wrapper {
+        width: 100%;
+        height: calc(50% - 50px);
+        
+    }
+    
+    .login-open .login-block-wrapper .signin-block-wrapper {
+        width: 100%;
+        height: calc(74% - 50px);
+        min-height: 250px;
+    }
+
+    .login-open .login-block-wrapper .signup-block-wrapper {
+        width: 100%;
+        height: calc(26% - 50px);
+            min-height: 110px;
+    }
+
+    .signup-open .login-block-wrapper .signup-block-wrapper {
+        width: 100%;
+        height: calc(74% - 50px);
+        min-height: 250px;
+    }
+
+    .signup-open .login-block-wrapper .signin-block-wrapper {
+        width: 100%;
+        height: calc(26% - 50px);
+            min-height: 110px;
+    }
+}
